@@ -4,18 +4,18 @@ std::mutex g_lock;
 
 TaskQueue::TaskQueue()
 {
-    taskQueue = new std::queue<std::function<void()>>;
+    _taskQueue = new std::queue<std::function<void()>>;
 }
 
 TaskQueue::~TaskQueue()
 {
-    delete taskQueue;
+    delete _taskQueue;
 }
 
 bool TaskQueue::pushTask(std::function<void()> task)
 {
     g_lock.lock();
-    taskQueue->push(task);
+    _taskQueue->push(task);
     g_lock.unlock();
 
     return 1;
@@ -26,10 +26,10 @@ std::function<void()> TaskQueue::popTask()
     std::function<void()> task;
 
     g_lock.lock();
-    if (!taskQueue->empty())
+    if (!_taskQueue->empty())
     {
-        task = taskQueue->front();
-        taskQueue->pop();
+        task = _taskQueue->front();
+        _taskQueue->pop();
     }
     else
     {

@@ -13,6 +13,6 @@ public:
 	std::function<void()> popTask();
 
 private:
-	std::queue<std::function<void()>>* taskQueue;
+	std::queue<std::function<void()>>* _taskQueue;
 };
 
