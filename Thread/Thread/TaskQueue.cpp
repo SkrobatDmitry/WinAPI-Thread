@@ -7,11 +7,6 @@ TaskQueue::TaskQueue()
     _taskQueue = new std::queue<std::function<void()>>;
 }
 
-TaskQueue::~TaskQueue()
-{
-    delete _taskQueue;
-}
-
 bool TaskQueue::pushTask(std::function<void()> task)
 {
     g_lock.lock();

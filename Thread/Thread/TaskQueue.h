@@ -7,7 +7,6 @@ class TaskQueue
 {
 public:
 	TaskQueue();
-	~TaskQueue();
 
 	bool pushTask(std::function<void()> task);
 	std::function<void()> popTask();

@@ -139,10 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Handler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Merger.cpp" />
+    <ClCompile Include="Sorter.cpp" />
     <ClCompile Include="TaskQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Handler.h" />
+    <ClInclude Include="Merger.h" />
+    <ClInclude Include="Sorter.h" />
     <ClInclude Include="TaskQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

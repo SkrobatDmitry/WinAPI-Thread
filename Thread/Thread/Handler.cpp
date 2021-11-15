@@ -6,11 +6,7 @@ Handler::Handler(TaskQueue queue, int count)
 	_threadCount = count;
 }
 
-Handler::~Handler()
-{
-}
-
-void Handler::threadHandler(TaskQueue queue, int count)
+void Handler::threadFunction(TaskQueue queue, int count)
 {
 	std::vector<std::thread> vec;
 	while (count) {
@@ -29,6 +25,6 @@ void Handler::threadHandler(TaskQueue queue, int count)
 
 void Handler::startProcessing()
 {
-	std::thread thr(threadHandler, _queue, _threadCount);
+	std::thread thr(threadFunction, _queue, _threadCount);
 	thr.join();
 }

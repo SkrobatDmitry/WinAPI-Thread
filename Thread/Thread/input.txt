@@ -1,3 +1,20 @@
-WinAPI
-Fourth lab
-Test .txt
+London
+Paris
+New York
+Moscow
+Dubai
+Tokyo
+Singapore
+Los Angeles
+Barcelona
+Madrid
+Rome
+Doha
+Chicago
+Abu Dhabi
+San Francisco
+Amsterdam
+St.Petersburg
+Toronto
+Sydney
+Berlin
